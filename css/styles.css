@@ -4,11 +4,13 @@ html, body {
 
 main {
     height: 2.5rem;
-    bottom: 0;
+    top:20px;
     z-index: 999999999;
     justify-content: space-between;
     width:1000px;
+    min-width: 400px;
     height: 800px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     position: absolute;
