@@ -1,7 +1,7 @@
 html, body, #drop {
     background-color: #008080;
     overflow: hidden;
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=128674), auto;
+    /* cursor: url(https://www.rw-designer.com/cursor-extern.php?id=128674), auto; */
     background-image: url(../images/wordart.png);
 
 }
@@ -11,6 +11,17 @@ html {
 
 }
 
+#win95main {
+    /* justify-content: space-between; */
+    min-height: 200px;
+
+    /* position: absolute; */
+    /* filter: blur(2px); */
+    margin-right: -100px;
+    max-width: 1200px;
+    flex-grow: 1;
+    height: 700px
+}
 
 .wrapper {
     /* margin: auto; */
@@ -54,19 +65,23 @@ button {
     height: 500px;
     align-self: end;
     margin-right: -100px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: rgba(196, 69, 186, 0.7);
 }
 
-#win7term {
-    width: 500px;
+#termwindow {
+    max-width: 500px;
     /* min-width: 300px; */
 
     height: 500px;
     align-self: end;
-    margin-right: -100px;
     margin-bottom: 20px;
+    margin-left: 10px;
     margin-top: -30px;
-    /* z-index: ; */
+    z-index: 999;
+    position: relative;
 }
 
 

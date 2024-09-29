@@ -1,15 +1,4 @@
-main.win95 {
-    height: 700px;
-    /* justify-content: space-between; */
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    /* position: absolute; */
-    /* filter: blur(2px); */
-    margin-right: -100px;
-    max-width: 1200px;
-    flex-grow: 1;
-}
+
 
 .win95 {
     background: #c0c0c0;
@@ -23,7 +12,8 @@ main.win95 {
     border-bottom: 2px solid black;
     /* padding: 2x; */
     /* overflow: auto; */
-
+    display: flex;
+    flex-direction: column;
 }
 
 .win95 > section {
@@ -40,6 +30,7 @@ main.win95 {
     /* margin-top: 30px; */
     padding: 2px;
     flex-grow: 1;
+    height: auto;
 }
 
 .win95 > header {
@@ -55,12 +46,29 @@ main.win95 {
     display: flex;
     align-items: center;
     height: auto;
-    margin-right: 3px;
+    margin-right: 2px;
 }
 
-.win95 > header > .buttons > img {
+.win95 > header > .buttons > div {
+    background-size: cover;
+    width: 25px;
+    height: 22px;
     margin: 1px;
-    width: 24px;
+}
+
+.win95 > header > .buttons > .x {
+    background-image: url("../images/close.gif");
+    margin-left: 3px;
+
+}
+
+.win95 > header > .buttons > .maximize {
+    background-image: url("../images/maximize.gif");
+
+}
+
+.win95 > header > .buttons > .minimize {
+    background-image: url("../images/minimize.gif");
 
 }
 
