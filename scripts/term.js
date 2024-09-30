@@ -85,7 +85,7 @@ $("#term").terminal({
     checkArity: false,
     greetings: 'Hi',
     prompt() {
-        return "[[;orange;]" + workingDirectory + "] $ ";
+        return "[[;green;]" + workingDirectory + "] $ ";
     },
 });
 

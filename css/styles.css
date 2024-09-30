@@ -2,11 +2,15 @@ html, body, #drop {
     background-color: #008080;
     overflow: hidden;
     /* cursor: url(https://www.rw-designer.com/cursor-extern.php?id=128674), auto; */
-    background-image: url(../images/wordart.png);
     background-attachment: fixed;
 
     caret-color: transparent;
 
+
+}
+
+body::before {
+    background-image: url(../images/wordart.png);
 
 }
 
