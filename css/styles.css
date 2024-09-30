@@ -35,6 +35,19 @@ html {
     
 }
 
+.wrapper2 {
+    /* margin: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.intermediate {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+}
+
 .desktop {
     position: absolute;
     width: 500px;
@@ -75,18 +88,8 @@ button {
     background-color: rgba(196, 69, 186, 0.7);
 }
 
-#termwindow {
-    max-width: 500px;
-    /* min-width: 300px; */
 
-    height: 500px;
-    align-self: end;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-top: -30px;
-    z-index: 999;
-    position: relative;
-}
+
 
 #termwindow > img {
     width: 10px;
@@ -137,6 +140,30 @@ header {
     background-color: black;
 }
 
+#idk {
+    max-width: 500px;
+    height: 400px;
+    /* right: 20px;
+    position: absolute; */
+    justify-self: end;
+    position: relative;
+    flex-grow:1;
+
+}
+
+#termwindow {
+    max-width: 500px;
+    /* min-width: 300px; */
+
+    height: 500px;
+    align-self: end;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: -30px;
+    z-index: 999;
+    position: relative;
+    flex-grow: 1;
+}
 
 
 
