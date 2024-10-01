@@ -2,17 +2,14 @@ html, body, #drop {
     background-color: #008080;
     overflow: hidden;
     /* cursor: url(https://www.rw-designer.com/cursor-extern.php?id=128674), auto; */
-    background-attachment: fixed;
 
     caret-color: transparent;
-
-
-}
-
-body::before {
     background-image: url(../images/wordart.png);
+    background-attachment: fixed;
 
 }
+
+
 
 html {
     overflow-y: auto;
@@ -145,7 +142,7 @@ header {
 }
 
 #idk {
-    max-width: 500px;
+    max-width: 400px;
     height: 400px;
     /* right: 20px;
     position: absolute; */
@@ -153,6 +150,11 @@ header {
     position: relative;
     flex-grow:1;
 
+}
+
+#idk section {
+    background: url("../images/the.png");
+    background-size: cover;
 }
 
 #termwindow {

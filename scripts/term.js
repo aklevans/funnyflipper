@@ -1,13 +1,24 @@
+const directory_type = "directory";
+const downloadable_type = "downloadable";
 let image = {
     "fileSystem": {
+        "type": directory_type,
         "/": {
+            "type": directory_type,
             "files": {
+                "type": directory_type,
                 "file1.txt": "contents",
                 "file2.txt": "contents2",
-                "skibidi.png": $('<img src="https://static.wikia.nocookie.net/skibidi-toilet-official/images/b/b1/GiantST.png/revision/latest/thumbnail/width/360/height/360?cb=20240205231829">')
+                "skibidi.png": $('<img src="https://static.wikia.nocookie.net/skibidi-toilet-official/images/b/b1/GiantST.png/revision/latest/thumbnail/width/360/height/360?cb=20240205231829">'),
+                "seal.wav": {
+                    "type": downloadable_type,
+                    "path" : "../audio/seal.wav"
+                }
             },
             "home": {
+                "type": directory_type,
                 "alex" : {
+                    "type": directory_type,
                     "file1223123.txt" : "content"
                 }
             },
@@ -32,7 +43,9 @@ $("#term").terminal({
     ls: function() {
         wd = lookUp(workingDirectory)
         for (const key in wd) {
-            console.log(typeof wd[key]);
+            if(key == "type") {
+                continue;
+            }
             if(typeof wd[key] == "object"){
                 this.echo("[[;orange;]" + key + "]")
             }
@@ -48,7 +61,7 @@ $("#term").terminal({
             this.echo(path + ": No such directory");
 
         }
-        if(typeof wd != "object") {
+        else if(wd.type != directory_type) {
             this.echo(path + ": Not a directory");
         }
 
@@ -76,6 +89,16 @@ $("#term").terminal({
         this.echo("cat <filepath>: print file contents (can also use open <filepath>)");
         this.echo("gwomp: gwomp");
     },
+    download: function(path) {
+        file = lookUp(path);
+        if(file.type == downloadable_type) {
+            let link = document.createElement("a");
+            link.download = "seal.wav";
+            link.href = file.path;
+            link.click();
+            link.remove();
+        }
+    }
     // eval: function(ev) {
     //     this.echo(eval(ev));
     // }
@@ -83,7 +106,7 @@ $("#term").terminal({
 }  ,
  {
     checkArity: false,
-    greetings: 'Hi',
+    greetings: 'Use "help" for list of commands',
     prompt() {
         return "[[;green;]" + workingDirectory + "] $ ";
     },
@@ -117,12 +140,13 @@ function lookUp(path, cd) {
 
     else if(path.charAt(0) != "/") {
         if(workingDirectory.charAt(workingDirectory.length - 1) != "/") {
-            workingDirectory += "/"
+            path = "/" + path
         }
         path = workingDirectory + path;
     }
 
     let wd = image.fileSystem["/"];
+    console.log(wd);
     if (path == "/") {
         workingDirectory = path;
         return wd;
@@ -133,15 +157,15 @@ function lookUp(path, cd) {
     for (let i = 1; i < paths.length; i++) {
         if (paths[i] in wd) {
             wd = wd[paths[i]];
-            if(cd){
-                workingDirectory = path;
-            }
+
         }
         else {
             return false;
         }
     }
-
+    if(cd && wd.type == directory_type){
+        workingDirectory = path;
+    }
     return wd;
     
 }

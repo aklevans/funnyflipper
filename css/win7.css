@@ -2,7 +2,7 @@
     --main-win7-color: rgba(69,128,196,0.7);
 }
 
-.win7 > section {
+.win7 section {
     background: rgb(255, 255, 255);
     margin: 8px;
     margin-top: 0px;
@@ -96,3 +96,4 @@
     /* border: 1px rgb(150, 150, 150) solid; */
     border-top: none;
 }
+

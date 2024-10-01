@@ -18,7 +18,9 @@
 
 }
 
-.win95 > section {
+
+
+.win95 section {
     background-color: rgb(255, 255, 255);
     /* box-shadow: 
     -1px -1px 0 1px white inset,
