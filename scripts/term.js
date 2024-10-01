@@ -93,8 +93,7 @@ $("#term").terminal({
         file = lookUp(path);
         if(file.type == downloadable_type) {
             let link = document.createElement("a");
-            link.download = "seal.wav";
-            link.href = file.path;
+            link.download = file.path;
             link.click();
             link.remove();
         }
