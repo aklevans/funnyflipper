@@ -12,7 +12,7 @@ let image = {
                 "skibidi.png": $('<img src="https://static.wikia.nocookie.net/skibidi-toilet-official/images/b/b1/GiantST.png/revision/latest/thumbnail/width/360/height/360?cb=20240205231829">'),
                 "seal.wav": {
                     "type": downloadable_type,
-                    "path" : "../audio/seal.wav"
+                    "path" : "audio/seal.wav"
                 }
             },
             "home": {
@@ -93,7 +93,7 @@ $("#term").terminal({
         file = lookUp(path);
         if(file.type == downloadable_type) {
             let link = document.createElement("a");
-            link.download = file.path;
+            link.href = file.path;
             link.click();
             link.remove();
         }
