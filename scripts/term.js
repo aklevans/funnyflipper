@@ -1,3 +1,7 @@
+// get the hell off my script
+
+
+
 const directory_type = "directory";
 const downloadable_type = "downloadable";
 let image = {
@@ -46,10 +50,12 @@ $("#term").terminal({
             if(key == "type") {
                 continue;
             }
-            if(typeof wd[key] == "object"){
+            if(wd[key].type == directory_type){
                 this.echo("[[;orange;]" + key + "]")
             }
-            else {
+            else if(wd[key].type == downloadable_type){
+                this.echo("[[;teal;]" + key + "]")
+            } else {
                 this.echo(key);
             }
         }
@@ -88,6 +94,7 @@ $("#term").terminal({
         this.echo("cd <path>: change directory");
         this.echo("cat <filepath>: print file contents (can also use open <filepath>)");
         this.echo("gwomp: gwomp");
+        this.echo("download <path>: download file");
     },
     download: function(path) {
         file = lookUp(path);
@@ -97,6 +104,9 @@ $("#term").terminal({
             link.href = file.path;
             link.click();
             link.remove();
+        }
+        else {
+            this.echo(path + ": not downloadable file");
         }
     }
     // eval: function(ev) {

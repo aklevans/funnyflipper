@@ -80,7 +80,7 @@ button {
     width: 500px;
     /* min-width: 300px; */
 
-    height: 500px;
+    height: 420px;
     align-self: end;
     margin-right: -100px;
     margin-bottom: 45px;
@@ -89,6 +89,9 @@ button {
     background-color: rgba(196, 69, 186, 0.7);
 }
 
+#win7main > section {
+    display: flex;
+}
 
 
 
