@@ -35,7 +35,10 @@
     padding: 4px;
     flex-grow: 1;
     height: auto;
-    overflow:auto;
+    overflow-y:auto;
+    max-width: 100%;
+
+
 
 }
 

@@ -11,12 +11,17 @@ let image = {
             "type": directory_type,
             "files": {
                 "type": directory_type,
-                "file1.txt": "contents",
-                "file2.txt": "contents2",
-                "skibidi.png": $('<img src="https://static.wikia.nocookie.net/skibidi-toilet-official/images/b/b1/GiantST.png/revision/latest/thumbnail/width/360/height/360?cb=20240205231829">'),
                 "seal.wav": {
                     "type": downloadable_type,
                     "path" : "audio/seal.wav"
+                },
+                "dock.wav": {
+                    "type": downloadable_type,
+                    "path": "audio/dock.wav"
+                },
+                "whitenoiseclip.wav": {
+                    "type": downloadable_type,
+                    "path": "audio/whitenoiseclip.wav"
                 }
             },
             "home": {
@@ -91,8 +96,8 @@ $("#term").terminal({
     help: function() {
         this.echo("ls: list content of current directory");
         this.echo("pwd: print working directory");
-        this.echo("cd <path>: change directory");
-        this.echo("cat <filepath>: print file contents (can also use open <filepath>)");
+        this.echo("cd <path>: change directory. Use '..' as path for parent directory");
+        this.echo("cat <path>: print file contents (can also use open <filepath>)");
         this.echo("gwomp: gwomp");
         this.echo("download <path>: download file");
     },
