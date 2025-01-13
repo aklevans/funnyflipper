@@ -25,7 +25,13 @@ html {
     margin-right: -100px;
     max-width: 1150px;
     flex-grow: 1;
-    height: 700px
+    /* height: 700px */
+}
+
+@media (min-width: 800px) {
+    #win95main {
+        height: 700px;
+    }
 }
 
 .wrapper {
