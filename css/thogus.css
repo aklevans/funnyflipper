@@ -1,0 +1,51 @@
+html, body, #drop {
+    background-color: #ffa8fb;
+    overflow: hidden;
+    /* cursor: url(https://www.rw-designer.com/cursor-extern.php?id=128674), auto; */
+
+    caret-color: transparent;
+
+
+}
+
+#main {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    border: 15px solid transparent;
+    border-image: url(../images/blacklace.png) 17 round;
+}
+
+h1 {
+    color:#771372;
+}
+
+#gassy {
+    height: 300px;
+    align-self: center;
+
+}
+
+#choices{
+    display:flex;
+    justify-content: space-around;
+
+}
+
+#answer {
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#choices > div > span {
+    color: white;
+}
+
+#choices > div:hover > span {
+    color: black;
+}
