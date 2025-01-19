@@ -1,6 +1,5 @@
 html, body, #drop {
     background-color: #ffa8fb;
-    overflow: hidden;
     /* cursor: url(https://www.rw-designer.com/cursor-extern.php?id=128674), auto; */
 
     caret-color: transparent;
@@ -33,6 +32,10 @@ h1 {
 
 }
 
+
+img {
+    max-width: 100%;
+}
 #answer {
     margin: auto;
     margin-top: 10px;
