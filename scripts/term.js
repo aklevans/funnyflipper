@@ -4,6 +4,8 @@
 
 const directory_type = "directory";
 const downloadable_type = "downloadable";
+const image_type = "image";
+
 let image = {
     "fileSystem": {
         "type": directory_type,
@@ -22,6 +24,10 @@ let image = {
                 "whitenoiseclip.wav": {
                     "type": downloadable_type,
                     "path": "audio/whitenoiseclip.wav"
+                },
+                "cyber.png": {
+                    "type": downloadable_type,
+                    "path": "images/cyber.png"
                 }
             },
             "home": {
