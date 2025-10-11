@@ -182,9 +182,20 @@ header {
 
 }
 
+#idk2 {
+    width: 400px;
+    height: 400px;
+
+}
 #idk section {
     background: url("../images/the.png");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+#idk2 section {
+    background-color: teal;
     display: flex;
     flex-direction: column;
 }
@@ -209,6 +220,16 @@ header {
     z-index: 999;
     position: relative;
     flex-grow: 1;
+}
+
+/* #hetalian {
+    margin-left:4px;
+    margin-right: 4px;
+    margin-bottom:12px;
+} */
+
+#hetalianbox{
+    max-width:fit-content
 }
 
 
