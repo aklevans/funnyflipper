@@ -222,11 +222,12 @@ header {
     flex-grow: 1;
 }
 
-/* #hetalian {
-    margin-left:4px;
+#hetalian {
+    /* margin-left:4px;
     margin-right: 4px;
-    margin-bottom:12px;
-} */
+    margin-bottom:12px; */
+    max-width: 100%
+}
 
 #hetalianbox{
     max-width:fit-content
