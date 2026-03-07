@@ -119,6 +119,11 @@ $("#term").terminal({
         else {
             this.echo(path + ": not downloadable file");
         }
+    },
+    gp: function() {
+        for(let i = 0; i < 100; i++) {
+            this.echo("SGUgdHVybnMgYXJvdW5kIGhhbmRzIG1lIGhpcyB3ZWFwb24gSGUgc2x1cnMgVXNlIGF0IHlvdXIgb3duIGRpc2NyZXRpb24gaXQncyBiZWVuIGEgcGxlYXN1cmUgU3RlZmFu")
+        }
     }
     // eval: function(ev) {
     //     this.echo(eval(ev));
